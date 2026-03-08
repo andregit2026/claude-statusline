@@ -29,6 +29,14 @@ if ($null -ne $data.context_window.used_percentage) {
 
 $ctxInfo = if ($null -ne $used) { "context: ${used}% used / ${remaining}% left" } else { "context: --" }
 
+# Extract cost information
+$totalCost = if ($null -ne $data.cost.total_cost_usd) {
+    "$([math]::Round($data.cost.total_cost_usd, 2))"
+} else {
+    "0.00"
+}
+$costInfo = "cost: `$$totalCost"
+
 # Context window size read dynamically from payload
 $ctxWindowSize = $data.context_window.context_window_size
 $ctxSize       = if ($ctxWindowSize) { "$([math]::Round($ctxWindowSize / 1000))k" } else { "" }
@@ -56,4 +64,4 @@ $locationPart = if ($branch) {
     "${blue}${folder}${reset}"
 }
 
-Write-Host "${cyan}${modelDisplay}${reset}${sep}${ctxColor}${ctxInfo}${reset}${sep}${locationPart}"
+Write-Host "${cyan}${modelDisplay}${reset}${sep}${gray}${costInfo}${reset}${sep}${ctxColor}${ctxInfo}${reset}${sep}${locationPart}"
