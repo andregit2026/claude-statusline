@@ -9,11 +9,14 @@ Claude Sonnet 4.6 (200k)  |  today: $4.44  |  context: 21% used / 79% left  |  D
 ^^^ cyan                      ^^^ gray          ^^^ yellow                       ^blue^ ^green^
 ```
 
-- **Model + context window size** — size read dynamically from the Claude Code payload
+- **Model + context window size** — size read dynamically from the Claude Code payload (cyan)
 - **Daily Foundry costs** — today's spend from your Anthropic Foundry instance (gray, optional)
-- **Context usage** — % used and % remaining
+- **Context usage** — % used and % remaining, color-coded:
+  - **Green** when < 50% used
+  - **Yellow** when 50-75% used
+  - **Red** when > 75% used
 - **Project folder** — name of the current working directory (blue)
-- **Git branch** — current branch if inside a git repo (green), omitted otherwise
+- **Git branch** — current branch if inside a git repo (magenta), omitted otherwise
 
 ## Requirements
 
