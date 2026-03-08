@@ -2,7 +2,7 @@
 
 ![Status line screenshot](images/screenshot.png)
 
-A custom status line for [Claude Code](https://claude.ai/code) that shows:
+A custom status line for [Claude Code](https://claude.ai/code) in Windows that shows:
 
 ```
 Claude Sonnet 4.6 (200k)  |  today: $4.44  |  context: 21% used / 79% left  |  DQX | main
