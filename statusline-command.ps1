@@ -34,19 +34,26 @@ $ctxWindowSize = $data.context_window.context_window_size
 $ctxSize       = if ($ctxWindowSize) { "$([math]::Round($ctxWindowSize / 1000))k" } else { "" }
 $modelDisplay  = if ($ctxSize) { "$model (${ctxSize})" } else { $model }
 
-$ESC    = [char]27
-$cyan   = "$ESC[96m"
-$yellow = "$ESC[93m"
-$blue   = "$ESC[94m"
-$green  = "$ESC[92m"
-$gray   = "$ESC[90m"
-$reset  = "$ESC[0m"
-$sep    = " ${gray}|${reset} "
+$ESC     = [char]27
+$cyan    = "$ESC[96m"
+$yellow  = "$ESC[93m"
+$blue    = "$ESC[94m"
+$green   = "$ESC[92m"
+$magenta = "$ESC[95m"
+$red     = "$ESC[91m"
+$gray    = "$ESC[90m"
+$reset   = "$ESC[0m"
+$sep     = " ${gray}|${reset} "
+
+$ctxColor = if ($null -eq $used)  { $yellow }
+            elseif ($used -lt 50) { $green }
+            elseif ($used -le 75) { $yellow }
+            else                  { $red }
 
 $locationPart = if ($branch) {
-    "${blue}${folder}${reset}${gray} | ${reset}${green}${branch}${reset}"
+    "${blue}${folder}${reset}${gray} | ${reset}${magenta}${branch}${reset}"
 } else {
     "${blue}${folder}${reset}"
 }
 
-Write-Host "${cyan}${modelDisplay}${reset}${sep}${yellow}${ctxInfo}${reset}${sep}${locationPart}"
+Write-Host "${cyan}${modelDisplay}${reset}${sep}${ctxColor}${ctxInfo}${reset}${sep}${locationPart}"
