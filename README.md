@@ -60,7 +60,7 @@ To display daily costs from your Anthropic Foundry instance:
    pip install requests python-dotenv
    ```
 
-3. Place `get_foundry_daily_cost.py` in the directory specified in `statusline-command.ps1` (default: `C:\Users\arausch\Documents\VS_Studio\`)
+3. Place `get_foundry_daily_cost.py` in the directory specified in `statusline-command.ps1` (default: `C:\Users\<username>\Documents\VS_Studio\`)
 
 The statusline will automatically fetch and display today's costs from your Foundry instance. If the script is not found or the API is unavailable, the cost display is silently omitted.
 
