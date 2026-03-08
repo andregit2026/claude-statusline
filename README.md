@@ -1,5 +1,7 @@
 # Claude Code Status Line
 
+![Status line screenshot](images/screenshot.png)
+
 A custom status line for [Claude Code](https://claude.ai/code) that shows:
 
 ```
