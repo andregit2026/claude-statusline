@@ -6,7 +6,7 @@ A custom status line for [Claude Code](https://claude.ai/code) in Windows that s
 
 ```
 Claude Sonnet 4.6 (200k)  |  today: $4.44  |  context: 21% used / 79% left  |  DQX | main
-^^^ cyan                      ^^^ gray          ^^^ yellow                       ^blue^ ^green^
+^^^ cyan                      ^^^ gray          ^^^ green                        ^blue^ ^magenta^
 ```
 
 - **Model + context window size** — size read dynamically from the Claude Code payload (cyan)
