@@ -5,12 +5,12 @@
 A custom status line for [Claude Code](https://claude.ai/code) in Windows that shows:
 
 ```
-Claude Sonnet 4.6 (200k)  |  today: $4.44  |  context: 21% used / 79% left  |  DQX | main
+Claude Sonnet 4.6 (200k)  |  costs: $1.24  |  context: 21% used / 79% left  |  DQX | main
 ^^^ cyan                      ^^^ gray          ^^^ green                        ^blue^ ^magenta^
 ```
 
 - **Model + context window size** — size read dynamically from the Claude Code payload (cyan)
-- **Daily Foundry costs** — today's spend from your Anthropic Foundry instance (gray, optional)
+- **Instance costs** — Instance costs in USD (gray, optional)
 - **Context usage** — % used and % remaining, color-coded:
   - **Green** when < 50% used
   - **Yellow** when 50-75% used
